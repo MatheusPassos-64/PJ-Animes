@@ -1,0 +1,352 @@
+/* ESTILOS DA HOME (INDEX) */
+body {
+    color: var(--cor-texto);
+    background-color: var(--cor-background);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    background: transparent;
+    padding: 27px 17%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.50s;
+}
+
+.logo {
+    font-size: var(--titulo-font);
+    color: var(--cor-texto);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+span { color: var(--cor-principal); }
+
+.navbar {
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar a {
+    color: var(--cor-texto);
+    font-size: var(--texto-font);
+    font-weight: 500;
+    margin: 15px 22px;
+    transition: all 0.5s;
+}
+
+.navbar a:hover { color: var(--cor-principal); }
+
+.h-rigth { display: flex; align-items: center; }
+
+.h-rigth a:first-child {
+    color: var(--cor-texto);
+    font-size: var(--texto-font);
+    margin-right: 20px;
+}
+
+.h-rigth a {
+    font-size: 20px;
+    color: var(--cor-texto);
+    margin-left: 5px;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+.h-rigth a:hover {
+    color: var(--cor-principal);
+    transform: translateY(-5px);
+}
+
+section { padding: 70px 8% 60px; }
+
+.home {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url(https://images.squarespace-cdn.com/content/v1/5fe4caeadae61a2f19719512/1721114243621-3IRPD7LCV3WSYFFUJL9Q/12.gif);
+    background-size: cover;
+    background-position: bottom center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.home-text h5 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: var(--cor-principal);
+}
+
+.home-text h1 {
+    font-size: var(--titulo-font);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.home-text p {
+    font-size: var(--texto-font);
+    font-weight: 500;
+    line-height: 30px;
+    color: var(--cor-texto);
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 13px 40px;
+    background-color: var(--cor-principal);
+    color: var(--cor-background);
+    font-size: 22px;
+    font-weight: 600;
+    border: 2px solid transparent;
+    text-decoration: none;
+    transition: all 0.5s;
+    display: inline-block;
+}
+
+.btn:hover {
+    transform: translateX(10px);
+    border: 2px solid var(--cor-texto);
+    background-color: transparent;
+    color: var(--cor-texto);
+}
+
+.sticky {
+    background-color: transparent;
+    backdrop-filter: blur(35px);
+}
+
+.galeria-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.row-img {
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.row-img img {
+    height: 100%;
+    display: block;
+    transition: all 0.5s;
+}
+
+.row-img img:hover { transform: scale(1.3); }
+
+.galeria-content h4 {
+    font-size: 22px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.galeria-content h4:hover { color: var(--cor-principal); }
+
+.ferias {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 90px;
+}
+
+.ferias-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.ferias-texto h5 {
+    font-size: 90px;
+    font-weight: 600;
+    color: var(--cor-texto);
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    margin-bottom: 21px;
+}
+
+.ferias-texto h2 {
+    color: var(--cor-principal);
+    font-weight: 810;
+    line-height: 1.2;
+    margin-bottom: 21px;
+}
+
+.ferias-texto p {
+    font-size: var(--texto-font);
+    font-weight: 500;
+    line-height: 31px;
+    color: rgba(255, 255, 255, 0.678);
+    margin-bottom: 30px;
+}
+
+.center-text { text-align: center; }
+.center-text h2 {
+    font-size: var(--subtitulo-font);
+    font-weight: 600;
+    margin: 21px;
+}
+
+.viagens-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.box { position: relative; }
+.box img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: brightness(70%);
+    transition: all 0.3s;
+    display: block;
+}
+.box h6 {
+    position: absolute;
+    left: 25px;
+    bottom: 95px;
+    font-size: 26px;
+    font-weight: 500;
+}
+.box h4 {
+    position: absolute;
+    left: 25px;
+    bottom: 65px;
+    font-size: 28px;
+    font-weight: 700;
+}
+.box img:hover {
+    filter: brightness(90%) hue-rotate(50deg);
+    transform: scale(1.04);
+    cursor: pointer;
+}
+
+.cultura {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 90px;
+}
+
+.cultura-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.cultura-texto h5 {
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--cor-principal);
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+}
+
+.cultura h2 {
+    font-size: var(--subtitulo-font);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.cultura-texto p {
+    font-size: var(--texto-font);
+    font-weight: 500;
+    line-height: 30px;
+    color: #ffffffae;
+    margin-bottom: 30px;
+}
+
+.contato-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.contato-texto h2 {
+    font-size: var(--subtitulo-font);
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.contato-texto p {
+    font-size: var(--texto-font);
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+}
+
+.contato-content form {
+    display: grid;
+    grid-template-columns: 1fr 0.4fr;
+    gap: 11px;
+}
+
+.contato-content form input:first-child {
+    padding: 15px;
+    background-color: rgb(246, 246, 246);
+    color: #333;
+    font-size: var(--texto-font);
+    border-radius: 6px;
+    border: none;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: flex-start;
+    gap: 20px;
+    padding: 40px 8%;
+    margin-top: 50px;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.footer-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-box h3 {
+    margin-bottom: 15px;
+}
+
+.footer-box a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.footer-box a:hover {
+    color: var(--cor-principal);
+}
+
+.social a {
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+.copyright {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.5);
+}

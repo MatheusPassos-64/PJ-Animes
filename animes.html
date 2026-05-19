@@ -1,74 +1,64 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AnimeStream</title>
+    <title>AnimeStream - Episódios</title>
 
-    <!-- IMPORTANDO CSS -->
-    <link rel="stylesheet" href="Css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Css/global.css">
+    <link rel="stylesheet" href="Css/animes.css">
 </head>
-
 <body>
 
-    <header>
-        <div class="logo">AnimeStream</div>
+    <header class="anime-header">
+        <div class="logo">Anime<span>Stream</span></div>
         <nav>
             <a href="index.html">Início</a>
             <a href="mangas.html">Mangás</a>
-            <a href="#">Populares</a>
-            <a href="#">Lançamentos</a>
+            
         </nav>
     </header>
 
-    <section class="banner">
-        <h1>Demon Slayer</h1>
-        <p>Japão, era Taisho. Tanjiro, um bondoso jovem que ganha a vida vendendo carvão, descobre que sua família foi
-            massacrada por um demônio. E pra piorar, Nezuko, sua irmã mais nova e única sobrevivente, também foi
-            transformada num demônio. Arrasado com esta sombria realidade, Tanjiro decide se tornar um matador de
-            demônios para fazer sua irmã voltar a ser humana, e para matar o demônio que matou sua família. Um triste
-            conto sobre dois irmãos, onde os destinos dos humanos e dos demônios se entrelaçam, começa agora.</p>
-        <button onclick="openModal()">▶ Assistir Trailer</button>
-    </section>
-
-    <section class="section">
-        <h2>🔥 Populares</h2>
-        <div class="row">
-            <div class="card"><img
-                    src="https://images.justwatch.com/poster/306456287/s718/xian-wang-de-ri-chang-sheng-huo.jpg"></div>
-            <div class="card"><img
-                    src="https://upload.wikimedia.org/wikipedia/pt/7/74/Dragon_Ball_Super_Key_visual.jpg"></div>
-            <div class="card"><img
-                    src="https://m.media-amazon.com/images/M/MV5BODVhMWE1NjctYjcwMC00MzQwLWI5YzItMTcyMTNiNmE5MTFjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg">
-            </div>
-            <div class="card"><img src="https://m.media-amazon.com/images/I/71+cb4GEMaL._AC_UF894,1000_QL80_.jpg"></div>
-            <div class="card"><img src="https://br.web.img3.acsta.net/c_310_420/pictures/23/10/03/21/32/0107747.jpg">
-            </div>
-            <div class="card"><img
-                    src="https://m.media-amazon.com/images/M/MV5BMTNjNGU4NTUtYmVjMy00YjRiLTkxMWUtNzZkMDNiYjZhNmViXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg">
-            </div>
-            <div class="card"><img
-                    src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/7b09fbb42da3d9fa613ec1d025cf41df.jpg">
-            </div>
-            <div class="card"><img
-                    src="https://sm.ign.com/ign_br/screenshot/default/poster-new-boku-no-hero-academia_rfzy.jpg">
-            </div>
+    <section class="anime-banner">
+        <div class="banner-content">
+            <h1>Demon Slayer: <br>Castelo Infinito</h1>
+            <p>O arco final emocionante começa aqui. Assista ao confronto decisivo entre o esquadrão de caçadores e as luas superiores dentro do misterioso Castelo Infinito.</p>
+            <button id="btn-trailer">Assistir Trailer</button>
         </div>
     </section>
-    <section id="player.html" class="section">
-        <h2>Sword Art Online</h2>
 
-        <a href="Episodios.html" target="_blank">Assistir Episódios</a>
-
-        <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Y4kfe8R1Iqs?si=RcS10crViQhODDnW"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <section class="episodios-container">
+        <h2>🔥 Todos os Animes & Episódios</h2>
+    
+        <div class="episodios-grid">
+            <a href="https://animesonlinecc.to/anime/sword-art-online/" target="_blank" class="anime-card">
+                <img src="https://cdn.myanimelist.net/images/anime/11/39717.jpg" alt="Sword Art Online">
+                <div class="card-overlay">Sword Art Online</div>
+            </a>
+    
+            <a href="https://animesonlinecc.to/anime/hunter-x-hunter-2011/" target="_blank" class="anime-card">
+                <img src="https://cdn.myanimelist.net/images/anime/1337/99013.jpg" alt="Hunter x Hunter">
+                <div class="card-overlay">Hunter x Hunter</div>
+            </a>
+    
+            <a href="https://animesonlinecc.to/anime/black-clover/" target="_blank" class="anime-card">
+                <img src="https://cdn.myanimelist.net/images/anime/2/88336.jpg" alt="Black Clover">
+                <div class="card-overlay">Black Clover</div>
+            </a>
+    
+            <a href="https://animesonlinecc.to/anime/shingeki-no-kyojin/" target="_blank" class="anime-card">
+                <img src="https://cdn.myanimelist.net/images/anime/10/47347.jpg" alt="Shingeki no Kyojin">
+                <div class="card-overlay">Shingeki no Kyojin</div>
+            </a>
         </div>
     </section>
+
+    <footer class="anime-footer">
+        <p>&copy; 2026 AnimeStream - Todos os direitos reservados.</p>
+    </footer>
 
 </body>
-
 </html>

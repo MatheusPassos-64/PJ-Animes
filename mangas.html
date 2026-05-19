@@ -4,69 +4,95 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mangás</title>
-    <link rel="stylesheet" href="Css/style.css">
+    <title>MangaGeek - Seus Mangás Online</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.min.css">
+
+    <link rel="stylesheet" href="Css/global.css">
+    <link rel="stylesheet" href="Css/manga.css">
 </head>
 <body>
-    <header>
-        <h1>MangaGeek</h1>
+
+    <header class="manga-header">
+        <div class="logo">Manga<span>Geek</span></div>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="animes.html">AnimeStream</a>
-            <a href="#">Populares</a>
-            <a href="#">Gêneros</a>
-            <a href="#">Contato</a>
+            <a href="index.html">Início</a>
+            <a href="mangas.html" class="active">Mangás</a>
+            <a href="animes.html">Animes</a>
         </nav>
     </header>
     
-    <section class="banner">
-        <h2>Leia seus mangás favoritos online</h2>
-        <p>Atualizações diárias • Gratuito • Fácil de usar</p>
+    <section class="manga-banner">
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+            <h2>Leia seus mangás favoritos online</h2>
+            <p>⚡ Atualizações diárias • Gratuitos • Em Alta Definição</p>
+        </div>
     </section>
     
-    <section class="container">
-        <h2 style="margin-bottom:20px;">🔥 Mangás Populares</h2>
+    <main class="manga-container">
+        <div class="section-title">
+            <h2><i class="ri-fire-fill"></i> Mangás Populares</h2>
+        </div>
     
         <div class="manga-grid">
     
-            <div class="card">
+            <div class="manga-card">
+                <div class="img-badge">Popular</div>
                 <img src="https://image.api.playstation.com/vulcan/ap/rnd/202203/0821/tKixgw7BoRSwwhrGzrHARkLl.png" alt="Manga 1">
                 <div class="card-content">
-                    <a href="https://manhwaweb.com/library?buscar=jojo" target="_blank">JoJo's Bizarre Adventure</a>
-                    <p>Aventura, Ação • 120 capítulos</p>
+                    <h3><a href="https://manhwaweb.com/leer/jojo-bizzare-adventure-_1743971330837-1" target="_blank">JoJo's Bizarre Adventure</a></h3>
+                    <p class="meta-info"><i class="ri-book-open-line"></i> Ação, Comédia • 45 caps</p>
                 </div>
             </div>
     
-            <div class="card">
+            <div class="manga-card">
+                <div class="img-badge">Novo</div>
                 <img src="https://m.media-amazon.com/images/M/MV5BNWU1OTgxYTMtZTViMy00MmU0LTg2ZGMtZDVkYTNlYzI4NWRjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Manga 2">
                 <div class="card-content">
-                    <a href="https://manhwaweb.com/manhwa/wistoria-varitas-y-espadas_1748962978861" target="_blank">Wistoria: Wand and Sword</a>
-                    <p>Fantasia, Romance • 85 capítulos</p>
+                    <h3><a href="https://manhwaweb.com/manhwa/wistoria-varitas-y-espadas_1748962978861" target="_blank">Wistoria: Wand and Sword</a></h3>
+                    <p class="meta-info"><i class="ri-book-open-line"></i> Fantasia, Romance • 85 caps</p>
                 </div>
             </div>
     
-            <div class="card">
+            <div class="manga-card">
                 <img src="https://img.assinaja.com/assets/tZ/004/img/254487_520x520.jpg" alt="Manga 3">
                 <div class="card-content">
-                    <a href="https://manhwaweb.com/manhwa/jujutsu-kaisen_1692934515995" target="_blank">Jujutsu no Kaisen</a>
-                    <p>Ação, Sobrenatural • 200 capítulos</p>
+                    <h3><a href="https://manhwaweb.com/manhwa/jujutsu-kaisen_1692934515995" target="_blank">Jujutsu Kaisen</a></h3>
+                    <p class="meta-info"><i class="ri-book-open-line"></i> Ação, Sobrenatural • 271 caps</p>
                 </div>
             </div>
     
-            <div class="card">
-                <img src="https://www.animationmagazine.net/wordpress/wp-content/uploads/Konosuba-Gods-Blessing-on-This-Wonderful-World.jpg" alt="Manga 4">
+            <div class="manga-card">
+                <img src="https://m.media-amazon.com/images/I/61J-gLejEsL._AC_UF1000,1000_QL80_.jpg" alt="Manga 4">
                 <div class="card-content">
-                    <a href="https://manhwaweb.com/manhwa/kono-subarashii-sekai-ni-shukufuku-wo_1770061100165" target="_blank">Konosuba</a>
-                    <p>Comédia, Aventura • 60 capítulos</p>
+                    <h3><a href="https://manhwaweb.com/leer/kono-subarashii-sekai-ni-shukufuku-wo_1770061100165-1" target="_blank">Konosuba!</a></h3>
+                    <p class="meta-info"><i class="ri-book-open-line"></i> Isekai, Comédia • 110 caps</p>
+                </div>
+            </div>
+            <div class="manga-card">
+                <img src="https://cdn.kobo.com/book-images/46aa2e72-cba5-4388-a790-51d19eb8c1ae/353/569/90/False/one-piece-vol-100.jpg" alt="Manga 5">
+                <div class="card-content">
+                    <h3><a href="https://manhwaweb.com/leer/one-piece_1695365223767-1" target="_blank">One Piece</a></h3>
+                    <p class="meta-info"><i class="ri-book-open-line"></i> Piratas, Comédia, Aventura. + 1113 caps</p>
+                </div>
+            </div>
+    
+            <div class="manga-card">
+                <img src="https://preview.redd.it/was-dragon-ball-z-good-or-bad-v0-z9w9byr2d6pd1.png?auto=webp&s=511b035e8b5d32e6287d3cca9a94b8b16a7ef262" alt="Manga 6">
+                <div class="card-content">
+                    <h3><a href="https://manhwaweb.com/leer/dragon-ball-kakumei_1749298183276-1" target="_blank">Dragon Ball Z</a></h3>
+                    <p class="meta-info"><i class="ri-book-open-line"></i> Ação, Comédia, Aventura. ° 325 caps</p>
                 </div>
             </div>
     
         </div>
-    </section>
+    </main>
     
-    <footer>
-        © 2026 MangaGeek - Todos os direitos reservados
+    <footer class="manga-footer">
+        <p>&copy; 2026 MangaGeek. Desenvolvido para Otakus.</p>
     </footer>
-    
+
 </body>
 </html>

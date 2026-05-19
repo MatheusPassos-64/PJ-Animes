@@ -1,0 +1,205 @@
+/* ==========================================
+   CONFIGURAÇÕES GERAIS DA PÁGINA DE ANIMES
+   ========================================== */
+   body {
+    background: linear-gradient(-45deg, #0f0f0f, #1a1a1a, #111, #1c1c1c);
+    background-size: 400% 400%;
+    animation: backgroundMove 15s ease infinite;
+    color: #fff;
+}
+
+@keyframes backgroundMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ==========================================
+   CABEÇALHO (HEADER)
+   ========================================== */
+.anime-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.anime-header .logo {
+    color: #ff00ea;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.anime-header .logo span {
+    color: #ff7b00; /* Cor laranja do tema anterior */
+}
+
+.anime-header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.anime-header nav a:hover {
+    color: #e50914;
+}
+
+/* ==========================================
+   BANNER DE DESTAQUE
+   ========================================== */
+.anime-banner {
+    height: 75vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(15,15,15,1)), 
+                url("https://www.einerd.com/wp-content/uploads/2025/03/demon-slayer-castelo-infinito.jpg") center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 8%;
+    margin-top: 60px; /* Para não ficar por baixo do header fixo */
+}
+
+.banner-content h1 {
+    font-family: 'Bangers', cursive;
+    font-size: 55px;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    color: #ff7b00;
+    letter-spacing: 2px;
+}
+
+.banner-content p {
+    max-width: 550px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin-bottom: 25px;
+}
+
+.banner-content button {
+    padding: 12px 30px;
+    background: #e50914;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.banner-content button:hover {
+    background: #ff0000;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(229, 9, 20, 0.6);
+}
+
+/* ==========================================
+   GRADE DE EPISÓDIOS / CARDS
+   ========================================== */
+.episodios-container {
+    padding: 40px 8% 80px;
+}
+
+.episodios-container h2 {
+    font-family: 'Bangers', cursive;
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: #fff;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #e50914;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.episodios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.anime-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    transition: 0.4s ease;
+    text-decoration: none;
+}
+
+.anime-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+    transition: 0.4s ease;
+}
+
+/* Efeito ao passar o mouse no Card */
+.anime-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(255, 123, 0, 0.3);
+}
+
+.anime-card:hover img {
+    filter: brightness(0.3) scale(1.05);
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 25px 15px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.7) 40%, transparent);
+    text-align: center;
+    color: white;
+    transition: 0.3s;
+}
+
+/* ==========================================
+   RODAPÉ (FOOTER)
+   ========================================== */
+.anime-footer {
+    background-color: #0a0a0a;
+    text-align: center;
+    padding: 30px;
+    color: #777;
+    border-top: 1px solid #1a1a1a;
+}
+
+/* ==========================================
+   RESPONSIVIDADE (TELAS MENORES)
+   ========================================== */
+@media (max-width: 768px) {
+    .anime-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .anime-header nav a {
+        margin: 0 10px;
+    }
+
+    .anime-banner {
+        height: 60vh;
+        padding: 0 5%;
+    }
+
+    .banner-content h1 {
+        font-size: 38px;
+    }
+
+    .episodios-container h2 {
+        font-size: 30px;
+    }
+}
