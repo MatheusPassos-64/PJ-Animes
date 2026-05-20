@@ -22,11 +22,17 @@
         </nav>
     </header>
 
-    <section class="anime-banner">
-        <div class="banner-content">
+    <section class="anime-banner" id="anime-banner" style="position: relative; overflow: hidden;">
+        <div class="banner-content" id="banner-content">
             <h1>Demon Slayer: <br>Castelo Infinito</h1>
             <p>O arco final emocionante começa aqui. Assista ao confronto decisivo entre o esquadrão de caçadores e as luas superiores dentro do misterioso Castelo Infinito.</p>
             <button id="btn-trailer">Assistir Trailer</button>
+        </div>
+        
+        <div id="video-container" style="display: none; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 5;">
+            <iframe id="trailer-video" width="100%" height="100%" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border: none;"></iframe>
+            
+            <button id="btn-fechar-trailer" style="position: absolute; top: 20px; right: 20px; background: rgba(229, 9, 20, 0.9); color: white; border: none; padding: 10px 20px; font-weight: bold; border-radius: 5px; cursor: pointer; z-index: 10; font-size: 14px; transition: 0.3s;">Fechar X</button>
         </div>
     </section>
 
@@ -59,6 +65,34 @@
     <footer class="anime-footer">
         <p>&copy; 2026 AnimeStream - Todos os direitos reservados.</p>
     </footer>
+    <script>
+        const btnTrailer = document.getElementById('btn-trailer');
+        const btnFecharTrailer = document.getElementById('btn-fechar-trailer');
+        const bannerContent = document.getElementById('banner-content');
+        const videoContainer = document.getElementById('video-container');
+        const trailerVideo = document.getElementById('trailer-video');
 
+        // URL do trailer incorporado (ID do YouTube de Demon Slayer: Castelo Infinito)
+        // O "?autoplay=1" faz o vídeo iniciar sozinho assim que o botão é clicado
+        const trailerUrl = "https://www.youtube.com/embed/3UiP4GwWNv0?si=2YcfdvpA1T3_n-7w?autoplay=1";
+
+        // Ação ao clicar em "Assistir Trailer"
+        btnTrailer.addEventListener('click', function() {
+            bannerContent.style.visibility = 'hidden'; // Oculta os textos do banner
+            bannerContent.style.opacity = '0';
+            
+            trailerVideo.src = trailerUrl; // Injeta o vídeo para carregar e dar play
+            videoContainer.style.display = 'block'; // Mostra o player de vídeo
+        });
+
+        // Ação ao clicar em "Fechar"
+        btnFecharTrailer.addEventListener('click', function() {
+            trailerVideo.src = ""; // Reseta o link para parar o áudio do vídeo imediatamente
+            videoContainer.style.display = 'none'; // Esconde o player
+            
+            bannerContent.style.visibility = 'visible'; // Traz o banner com textos de volta
+            bannerContent.style.opacity = '1';
+        });
+    </script>
 </body>
 </html>
