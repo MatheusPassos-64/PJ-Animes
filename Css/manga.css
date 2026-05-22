@@ -112,29 +112,61 @@
     color: #ff2e63;
 }
 
+/* 1. O CONTAINER PRINCIPAL - Força todos os filhos a terem a mesma altura */
 .manga-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px; /* Espaçamento entre os cards */
+    align-items: stretch; /* ISSO AQUI força todos os cards da mesma linha a esticarem igual */
 }
 
-/* O Card Redesenhado */
+/* 2. O CARD - Configuração para simetria total */
 .manga-card {
     background: #1f2026;
-    border-radius: 12px;
+    border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 8px 20px rgba(0,0,0,0.4);
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: relative;
     border: 1px solid rgba(255, 255, 255, 0.03);
+    
+    /* Configurações internas de layout */
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Obriga o card a aceitar a altura máxima da linha */
+    box-sizing: border-box;
 }
 
+/* 3. A IMAGEM - Dimensões rígidas matematicamente iguais */
 .manga-card img {
     width: 100%;
-    height: 320px;
+    height: 320px !important; /* O !important garante que nenhuma outra regra sobrescreva */
+    min-height: 320px !important;
+    max-height: 320px !important;
     object-fit: cover;
     display: block;
     transition: transform 0.5s ease;
+}
+
+/* 4. O TEXTO - Controla o espaçamento interno */
+.manga-card .card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Faz o bloco de texto preencher o fundo perfeitamente */
+    justify-content: space-between; /* Empurra os capítulos pro rodapé */
+}
+
+/* Garante que os títulos ocupem sempre o mesmo padrão visual */
+.manga-card .card-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.15rem;
+    line-height: 1.4;
+}
+
+/* Alinha o texto do rodapé (ex: 45 caps) */
+.manga-card .card-content .meta-info {
+    margin-top: auto; /* Empurra para o fim do bloco */
 }
 
 /* Etiqueta por cima da imagem (ex: "Popular", "Novo") */

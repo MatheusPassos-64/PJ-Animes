@@ -169,7 +169,7 @@ section { padding: 70px 8% 60px; }
 .ferias-img img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 .ferias-texto h5 {
@@ -178,7 +178,7 @@ section { padding: 70px 8% 60px; }
     color: var(--cor-texto);
     text-transform: uppercase;
     letter-spacing: 0.7px;
-    margin-bottom: 21px;
+    margin-bottom: 23px;
 }
 
 .ferias-texto h2 {
@@ -195,7 +195,52 @@ section { padding: 70px 8% 60px; }
     color: rgba(255, 255, 255, 0.678);
     margin-bottom: 30px;
 }
+/* Container do conteúdo do Gachiakuta */
+.gachiakuta-content {
+    max-width: 600px; /* Evita que o texto estique muito para os lados */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Cria um espaçamento uniforme entre título, texto e botão */
+}
 
+/* Título imponente */
+.gachiakuta-content h3 {
+    font-size: 3rem; /* Deixa o título grande como no print */
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+/* Estilização do texto descritivo */
+.gachiakuta-content p {
+    font-size: 1.1rem; /* Tamanho de leitura confortável */
+    line-height: 1.6;  /* Espaçamento entre as linhas para não sufocar o texto */
+    color: #e2e8f0;    /* Um branco levemente acinzentado para não cansar os olhos */
+    margin: 0;
+}
+
+/* O BOTÃO "VER MAIS" REDESENHADO */
+.gachiakuta-content .btn-ver-mais {
+    display: inline-block;
+    align-self: flex-start; /* Impede que o botão estique a largura toda */
+    background-color: #a855f7; /* Roxo vibrante igual ao da imagem */
+    color: #ffffff;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none; /* Remove o sublinhado padrão de links */
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+}
+
+/* Efeito de passar o mouse no botão (Hover) */
+.gachiakuta-content .btn-ver-mais:hover {
+    background-color: #9333ea; /* Roxo um pouco mais escuro ao passar o mouse */
+    transform: translateY(-2px); /* Efeito sutil de levantar */
+    box-shadow: 0 6px 20px rgba(168, 85, 247, 0.6);
+}
 .center-text { text-align: center; }
 .center-text h2 {
     font-size: var(--subtitulo-font);
