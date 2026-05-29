@@ -101,23 +101,38 @@ section { padding: 70px 8% 60px; }
     margin-bottom: 30px;
 }
 
-.btn {
-    padding: 13px 40px;
-    background-color: var(--cor-principal);
-    color: var(--cor-background);
-    font-size: 22px;
+/* ==========================================
+   ESTILO DETALHADO DO BOTÃO DE TRAILER (HEADER)
+   ========================================== */
+   .btn-trailer {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #ff2e63; /* Borda rosa neon */
+    padding: 10px 22px;        /* Deixa a caixa maior (vertical e horizontal) */
+    font-size: 14px;
     font-weight: 600;
-    border: 2px solid transparent;
-    text-decoration: none;
-    transition: all 0.5s;
-    display: inline-block;
+    text-transform: uppercase; /* Letras maiúsculas para dar destaque */
+    letter-spacing: 1px;       /* Espaçamento entre as letras */
+    border-radius: 30px;       /* Bordas arredondadas estilo pílula */
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;                  /* Espaço entre o ícone e o texto */
+    transition: all 0.4s ease;
+    box-shadow: 0 0 10px rgba(255, 46, 99, 0.2); /* Sombra leve interna */
 }
 
-.btn:hover {
-    transform: translateX(10px);
-    border: 2px solid var(--cor-texto);
-    background-color: transparent;
-    color: var(--cor-texto);
+/* Efeito Hover (Passar o mouse) */
+.btn-trailer:hover {
+    background: #ff2e63;       /* Preenche o botão com rosa */
+    color: #fff;
+    transform: translateY(-2px); /* Sutil efeito de levantar */
+    box-shadow: 0 0 20px rgba(255, 46, 99, 0.6); /* Brilho neon intenso */
+}
+
+/* Efeito ao clicar */
+.btn-trailer:active {
+    transform: translateY(0);
 }
 
 .sticky {
@@ -394,4 +409,63 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: rgba(0,0,0,0.5);
+}
+/* ==========================================
+   ESTILOS DO MODAL DO TRAILER (SOBREPOSTO)
+   ========================================== */
+   .modal {
+    display: none; /* Fica escondido por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Fundo escuro atrás do vídeo */
+    z-index: 9999; /* Valor alto para ficar por cima do cabeçalho fixo */
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px); /* Efeito de desfoque no fundo do site */
+}
+
+.modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    background: #1f2026;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 46, 99, 0.3);
+    box-shadow: 0 0 30px rgba(255, 46, 99, 0.3);
+}
+
+.close-modal {
+    position: absolute;
+    top: -45px;
+    right: 0;
+    color: #fff;
+    font-size: 38px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-modal:hover {
+    color: #ff2e63; /* Destaca o X de fechar com a cor rosa tema do site */
+}
+
+/* Mantém a proporção correta do vídeo de 16:9 */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }

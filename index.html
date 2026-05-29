@@ -44,7 +44,7 @@
             <p>Mitsuha, uma garota do campo, e Taki, um garoto de Tóquio, que trocam de corpo. O filme explora temas
                 como Musubi (conexão/tempo), o cometa Tiamat, e o amor que transcende o tempo e o espaço para salvar
                 vidas</p>
-            <a href="#" class="btn">Trailer</a>
+                <button class="btn-trailer" data-video="https://www.youtube.com/embed/nWrCkR-h_gs?si=hbNHu5Rd_1I5gYan"><i class="ri-play-mini-fill"></i> Assistir Trailer</button>
         </div>
     </section>
     <section class="galeria">
@@ -152,6 +152,45 @@
     <div class="copyright">
         <p>Direitos Reservados 2026 By Takoku Navara</p>
     </div>
+    <div id="trailer-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="video-container">
+                <iframe id="trailer-video" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const btnTrailer = document.querySelector('.btn-trailer');
+        const modal = document.getElementById('trailer-modal');
+        const closeModal = document.querySelector('.close-modal');
+        const trailerVideo = document.getElementById('trailer-video');
+    
+        // Quando clicar no botão do cabeçalho, abre o modal e carrega o vídeo
+        if (btnTrailer) {
+            btnTrailer.addEventListener('click', (e) => {
+                e.preventDefault(); // Evita que a página recarregue se for um link <a>
+                const videoUrl = btnTrailer.getAttribute('data-video');
+                trailerVideo.src = videoUrl;
+                modal.style.display = 'flex';
+            });
+        }
+    
+        // Quando clicar no 'X', fecha o modal e limpa o vídeo (para o som parar)
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+            trailerVideo.src = '';
+        });
+    
+        // Fecha o modal se o usuário clicar no fundo escuro, fora do vídeo
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+                trailerVideo.src = '';
+            }
+        });
+    </script>
 </body>
 
 </html>
