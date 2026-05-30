@@ -159,6 +159,7 @@ section { padding: 70px 8% 60px; }
 
 .row-img img {
     height: 100%;
+    width: 100%;
     display: block;
     transition: all 0.5s;
 }
@@ -378,7 +379,7 @@ footer {
     gap: 20px;
     padding: 40px 8%;
     margin-top: 50px;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(13, 79, 221, 0.2);
 }
 
 .footer-box {
